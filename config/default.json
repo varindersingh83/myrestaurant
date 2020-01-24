@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://varinder123:varinder123@restaurants-cluster-flzbh.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
