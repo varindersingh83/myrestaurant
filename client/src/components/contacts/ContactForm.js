@@ -34,6 +34,7 @@ const ContactForm = () => {
   const onSubmit = e => {
     e.preventDefault();
     if (current === null) {
+      console.log('contact = ', contact);
       addContact(contact);
     } else {
       updateContact(contact);
@@ -52,7 +53,7 @@ const ContactForm = () => {
       </h2>
       <input
         type='text'
-        placeholder='Name'
+        placeholder='Restaurant Name'
         name='name'
         value={name}
         onChange={onChange}

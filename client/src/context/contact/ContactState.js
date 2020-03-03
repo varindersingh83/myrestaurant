@@ -44,6 +44,7 @@ const ContactState = props => {
 
   // Add Contact
   const addContact = async contact => {
+    console.log('contact in context = ', contact);
     const config = {
       headers: {
         'Content-Type': 'application/json'

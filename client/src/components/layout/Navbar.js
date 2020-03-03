@@ -23,11 +23,18 @@ const Navbar = ({ title, icon }) => {
 
   const authLinks = (
     <Fragment>
+      <li>
+        <Link to='/About'>Recommended</Link>
+      </li>
+      <li>
+        <Link to='/'>My List</Link>
+      </li>
+
       <li>Hello {user && user.name}</li>
       <li>
         <a onClick={onLogout} href='#!'>
           <i className='fas fa-sign-out-alt' />{' '}
-          <span className='hide-sm'>Logout</span>
+          <span className='hide-sm'></span>
         </a>
       </li>
     </Fragment>

@@ -1,0 +1,23 @@
+.myContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+}
+.myImages {
+  width: 450px;
+  height: 350px;
+}
+
+.imgContainer {
+  width: 450px;
+  height: 450px;
+  margin: 10px;
+  transition: all 1s;
+}
+
+.imgContainer:hover {
+  transform: scale(1.05);
+}
