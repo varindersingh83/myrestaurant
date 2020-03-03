@@ -35,11 +35,11 @@ const About = () => {
   const onSubmit = e => {
     e.preventDefault();
     if (current === null) {
-      contact.email = 'myemail';
-      contact.name = 'name';
-      contact.phone = 'myemail';
-      contact.type = 'personal';
-      console.log('contact = ', contact);
+      contact.email = recommendedList[e.target.value].name;
+      contact.name = recommendedList[e.target.value].email;
+      contact.phone = recommendedList[e.target.value].phone;
+      contact.type = recommendedList[e.target.value].type;
+      console.log('contact = ', contact, e.target.value);
       addContact(contact);
     } else {
       updateContact(contact);
@@ -52,7 +52,7 @@ const About = () => {
   };
   const recommendedList = [
     {
-      id: 1,
+      id: 0,
       name: 'Umbria',
       email: 'SF',
       phone: 'I love it',
@@ -61,7 +61,7 @@ const About = () => {
         'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
     },
     {
-      id: 2,
+      id: 1,
       name: "suju's",
       email: 'NY',
       phone: 'I love it',
@@ -70,7 +70,7 @@ const About = () => {
         'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
     },
     {
-      id: 3,
+      id: 2,
       name: 'Rosa',
       email: 'toronto',
       phone: 'I love it',
@@ -79,7 +79,7 @@ const About = () => {
         'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
     },
     {
-      id: 4,
+      id: 3,
       name: 'BurgerPlace',
       email: 'HK',
       phone: 'I love it',
@@ -98,7 +98,12 @@ const About = () => {
             <p>
               Name: {list.name} --- City: {list.email}
             </p>
-            <button className='btn btn-dark btn-sm' onClick={onSubmit}>
+            <button
+              className='btn btn-dark btn-sm'
+              id='id'
+              value={list.id}
+              onClick={onSubmit}
+            >
               Add
             </button>
           </div>

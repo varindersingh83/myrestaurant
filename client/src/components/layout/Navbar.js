@@ -69,7 +69,7 @@ Navbar.propTypes = {
 };
 
 Navbar.defaultProps = {
-  title: 'My Restaurants',
+  title: 'Foohoodies',
   icon: 'fas fa-utensils'
 };
 
